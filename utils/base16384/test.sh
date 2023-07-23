@@ -2,8 +2,6 @@
 
 case "$1" in
 	"base16384")
-        opkg install coreutils-base64
-
         i=1
         while [ $i -le 256 ]; do
             s="$(head /dev/urandom | head -c $i | base64 -w 0)"
